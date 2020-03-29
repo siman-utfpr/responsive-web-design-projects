@@ -1,0 +1,48 @@
+#main {
+  background-color: hsl(0, 10%, 70%);
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(5, 5, 5);
+  padding-top: 50px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#img-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+figure {
+  background-color: hsl(0, 10%, 50%);
+  padding: 15px;
+}
+
+figcaption {
+  margin: 15px 0 10px 0;
+}
+
+.miracle-list {
+  width: 50%;
+  text-align: left;
+  padding-left: 30%;
+}
+
+.gifs-label {
+  font-weight: bold;
+}
+
+a:hover {
+  color: gold;
+}
