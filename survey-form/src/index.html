@@ -1,0 +1,48 @@
+<body>
+  <h1 id="title">Animal survey form</h1>
+  <p id="description">Please take your time to kindly answer our questions</p>
+  <form id="survey-form">
+    <label for="name" id="name-label">Name:</label>
+    <input id="name" required type="text" placeholder="Enter your name">
+    <label for="email" id="email-label">Email:</label>
+    <input id="email" required type="email" placeholder="Enter your email">
+    <label for="number" id="number-label">Age:</label>
+    <input id="number" required type="number" placeholder="Enter your age" min="1" max="120">
+    <select id="dropdown" required>
+      <option selected disabled>Select your favorite animal</option>
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="lizard">Lizard</option>
+      <option value="elephant">Elephant</option>
+      <option value="bee">Bee</option>
+    </select>
+    <label>Do you have the animal you selected?</label>
+    <label>
+      <input id="radio-yes" type="radio" value="yes" name="have-animal" checked>Yes
+    </label>
+    <label>
+      <input id="radio-no" type="radio" value="no" name="have-animal">No
+    </label>
+
+    <label>You think that the selected animal should be: </label>
+    <label for="wild">
+      <input id="wild" type="checkbox" name="habitat" value="wild">
+      Out in the wild
+    </label>
+    <label for="home">
+      <input id="home" type="checkbox" name="habitat" value="home">
+      Created at home
+    </label>
+    <label for="zoo">
+      <input id="zoo" type="checkbox" name="habitat" value="zoo">
+      In a zoo
+    </label>
+    <label for="reserve">
+      <input id="reserve" type="checkbox" name="habitat" value="reserve">
+      Protected in a reserve
+    </label>
+    <label for="comment">If you have any comments, enter them below</label>
+    <textarea id="comment" placeholder="Comment"></textarea>
+    <button type="submit" id="submit">Submit</button>
+  </form>
+</body>

@@ -1,0 +1,73 @@
+body {
+  text-align: center;
+}
+
+body::after {
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+  content: "";
+  background: url("https://www.swedishnomad.com/wp-content/images/2019/06/Rainforest-animals.jpg");
+  opacity: 0.3;
+}
+
+h1,
+p {
+  text-align: center;
+  background-color: white;
+}
+
+form {
+  font-size: 20px;
+  border-radius: 2%;
+  margin-left: 20%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 60%;
+  background-color: rgba(105, 10, 15, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+select {
+  width: 90%;
+  height: 40px;
+  border-radius: 1%;
+  margin-top: 3px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+form label {
+  margin-left: 5%;
+  align-self: flex-start;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: white;
+}
+
+textarea {
+  width: 90%;
+  height: 70px;
+  margin-top: 4px;
+  margin-bottom: 30px;
+}
+
+button {
+  border: 0px;
+  background-color: green;
+  height: 35px;
+  width: 90%;
+  color: white;
+  font-size: 17px;
+}
