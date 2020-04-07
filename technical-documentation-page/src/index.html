@@ -1,0 +1,239 @@
+<div class="container">
+  <nav id="navbar">
+    <header id="topic">CSS Selectors</header>
+    <ul>
+      <a class="nav-link" href="#Introduction">
+        Introduction
+      </a>
+      <a class="nav-link" href="#CSS_Versions">
+        CSS Versions
+      </a>
+      <a class="nav-link" href="#Syntax">
+        Syntax
+      </a>
+      <a class="nav-link" href="#Selector_Categories">
+        Selector Categories
+      </a>
+      <a class="nav-link" href="#Simple_Selectors">
+        Simple Selectors
+      </a>
+      <a class="nav-link" href="#Combinators">
+        Combinators
+      </a>
+      <a class="nav-link" href="#Pseudo-class_Selectors">
+        Pseudo-class Selectors
+      </a>
+      <a class="nav-link" href="#Pseudo-element_Selectors">
+        Pseudo-element Selectors
+      </a>
+      <a class="nav-link" href="#Attribute_Selectors">
+        Attribute Selectors
+      </a>
+
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>CSS Selectors are patterns used to select HTML elements to be styled. Such patterns may be formed by a variety of characteristics of the element: </p>
+      <ul>
+        <li>The element itself</li>
+        <li>Class</li>
+        <li>Id</li>
+        <li>Attributes</li>
+        <li>Pseudo-class (hovered, active link, etc)</li>
+      </ul>
+    </section>
+    <section class="main-section" id="CSS_Versions">
+      <header>CSS Versions</header>
+      <p>CSS levels 1 and 2 are built-in on CSS3, the current version. CSS1 was the initial definition, which defined the terminology of the language and the syntax for the rules.</p>
+      <p>CSS2 was developed over CSS1 and introduced new concepts such as absolute, relative, and fixed positioning of elements; media types and new properties for fonts.</p>
+      <p>CSS3 introduced a lot of new pseudo-classes and made major improvements on elements' borders. CSS3 has been divided in modules, making it's use simpler.</p>
+      <p>Without giving much detail on CSS versions, one thing must be kept in mind: the language is still under development and with enough time, new features (like selectors for parent elements) will be added.</p>
+    </section>
+    <section class="main-section" id="Syntax">
+      <header>Syntax</header>
+      <p>
+        The basic syntax of a CSS rule is as follows:
+      </p>
+      <code>
+        selector {
+        property: value;
+        }
+      </code>
+      </header>
+    </section>
+    <section class="main-section" id="Selector_Categories">
+      <header>Selector Categories
+      </header>
+      <p>Selectors can be divided into 5 categories: </p>
+      <ul>
+        <li>Simple</li>
+        <li>Combinator</li>
+        <li>Pseudo-Class</li>
+        <li>Pseudo-Element</li>
+        <li>Attibute</li>
+      </ul>
+      <p>The following sections will explain each one of these categories and give the neccessary examples.</p>
+    </section>
+    <section class="main-section" id="Simple_Selectors">
+      <header>Simple Selectors
+      </header>
+      <p>Simple selectors select elements based on their name, class or id. This category also includes the universal selector and the grouping selector.</p>
+      <p class="subcategory">Name</p>
+      <p>A selector defined by the name of an element selects all the elements on the page with the specified name.</p>
+      <p>Target: </p>
+      <code>&lt;div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;/div&gt;
+      </code>
+      <p>Selector:</p>
+      <code>div{
+        }
+      </code>
+      <p class="subcategory">Id</p>
+      <p>Each element id should be unique on a page, so this selector is used to target a specific element.</p>
+      <p>Target: </p>
+      <code>&lt;div id="div1"&gt;&lt;/div&gt;</code>
+      <p>Selector: </p>
+      <code>#div1{
+        }</code>
+      <p class="subcategory">Class</p>
+      <p>Classes are used to create a custom group os elements. A class can be used when only certains elements of a kind should be styled, or when the same rules must be applied to elements with different names.</p>
+      <p>Target: </p>
+      <code>&lt;p class="red-text"&gt;Text&lt;/p&gt;
+        &lt;label class="red-text"&gt;Text&lt;/label&gt;</code>
+      <p>Selector: </p>
+      <code>.red-text{
+        color: red;
+        }</code>
+      <p class="subcategory">Element and class</p>
+      <p>It is possible to select an element based both on it's name and class. For example, to select all divs that have the class "square", the selector would be the following: </p>
+      <code>div.square {
+        }</code>
+      <p class="subcategory">
+        Multiple Classes
+      </p>
+      <p>To select an element that have both class1 and class2, the following selector would be used: </p>
+      <code>.class1.class2{
+        }</code>
+      <p class="subcategory">Grouping selector</p>
+      <p>Another way to select multiple kinds of elements is the grouping selector. Let's say we have the following rules: </p>
+      <code>p{
+        color: blue;
+        }
+
+        label{
+        color: blue;
+        }</code>
+
+      <p>That could be written as: </p>
+      <code>p, label {
+        color: red;
+        }</code>
+      <p class="subcategory">Universal selector</p>
+      <p>The universal selector targets everything on the page. Example: </p>
+      <code>*{
+        font-size: 16px;
+        }</code>
+    </section>
+    <section class="main-section" id="Combinators">
+      <header>Combinators</header>
+      <p>Combinators define relation between selectors. A CSS selector may contain more than one simple selector, and a combinator is needed to connect them.</p>
+      <p>There are four combinators:
+      </p>
+      <ul>
+        <li>Descendant (space)</li>
+        <li>Child (>)</li>
+        <li>Adjacent sibling (+)</li>
+        <li>General sibling (~)</li>
+      </ul>
+      <p class="subcategory">Descendant</p>
+      <p>The descendant selector is used to match elements that are descendants of a specified element. </p>
+      <p>Target: </p>
+      <code>&lt;div&gt; &lt;p&gt; &lt;/p&gt;&lt;/div&gt;</code>
+      <p>Selector: </p>
+      <code>div p{
+        }</code>
+      <p class="subcategory">Child</p>
+      <p>The child selector selects an element that have an specified parent. </p>
+      <p>Target: </p>
+      <code>&lt;div&gt; &lt;p&gt; &lt;/p&gt;&lt;/div&gt;</code>
+      <p>Selector: </p>
+      <code>div > p{
+        }</code>
+      <p class="subcategory">Adjacent sibling</p>
+      <p>The adjacent sibling selector selects an element that is immediately preceded by an specified element. Both elements must have the same parent. </p>
+      <p>Target: </p>
+      <code>&lt;div&gt;&lt;/div&gt;
+        &lt;p&gt; &lt;/p&gt;</code>
+      <p>Selector (to select the p element): </p>
+      <code>div + p{
+        }</code>
+      <p class="subcategory">General sibling</p>
+      <p>The general sibling selector selects an element that is preceded by an specified element. Both elements must have the same parent. </p>
+      <p>Target: </p>
+      <code>&lt;div&gt;
+        &lt;p&gt; &lt;/p&gt;
+        &lt;label&gt; &lt;/label&gt;
+        &lt;a&gt; &lt;/a&gt;
+        &lt;/div&gt;</code>
+      <p>Selector (to select the a element): </p>
+      <code>p ~ a{
+        }</code>
+    </section>
+    <section class="main-section" id="Pseudo-class_Selectors">
+      <header>Pseudo-class Selectors</header>
+      <p>Pseudo-classes are special states of an element, like a hovered div or an active link. The syntax of pseudo-class selectors is as follows: </p>
+      <code><i>selector</i>:pseudoclass{}</code>
+      <p>For example, to select a div with the "class1" class being hovered: </p>
+      <code>div.class1:hover {}</code>
+      <p>Pseudo classes includes a lot of features, such as selecting elements based on it's position on the parent, only childs and even the elements that are <i>not</i> selected by a specified selector.</p>
+      <p>To view the full list of pseudo-class selectors, visit the <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">W3Schools site.</a></p>
+    </section>
+    <section class="main-section" id="Pseudo-element_Selectors">
+      <header>Pseudo-element Selectors</header>
+      <p>A pseudo-element selector targets specific parts of elements, like the first line or letter. It also can be used to insert content before and after a specified element.</p>
+      <p>The syntax is similar to pseudo classes: </p>
+      <code><i>selector</i>::pseudo-element {}</code>
+      <p>To style the first letter of each paragraph, making it green: </p>
+      <code>p::first-letter{
+        color: green;
+        }</code>
+      <p>To insert content before an element: </p>
+      <code>p::before {
+        content: "example";
+        }</code>
+    </section>
+    <section class="main-section" id="Attribute_Selectors">
+      <header>Attribute Selectors</header>
+      <p>These selectors make it possible to style elements based in its attributes or attribute values.</p>
+      <p class="subcategory">Attribute</p>
+      <p>To target all "a" elements with the [target] attribute specified: </p>
+      <code>a[target]{}</code>
+      <p class="subcategory">Attribute value</p>
+      <p>To target all "a" elements with the [target] attribute set as "_blank": </p>
+      <code>a[target=""_blank""]{}</code>
+      <p class="subcategory">Pattern matching</p>
+      <p>There are some selectors to select elements based on patterns of it's attributes: </p>
+      <p>Containing a specific word (~): </p>
+      <code>[title~="code"]{}</code>
+      <p>Is the exact value or the value followed by - (|): </p>
+      <p>Target: (the first two p will be styled, but the third don't)</p>
+      <code>&lt;p class="top"&gt;&lt;/p&gt;
+        &lt;p class="top-2"&gt;&lt;/p&gt;
+        &lt;p class="top2"&gt;&lt;/p&gt;</code>
+      <p>Selector: </p>
+      <code>[class|="top"]{}
+      </code>
+      <p>Beggining with (^): </p>
+      <p>(With this selector, all p elements of the previous example would be styled)</p>
+      <code>
+        [class^="top"]{}
+      </code>
+      <p>Ends with ($): </p>
+      <code>[class$="top"]{}</code>
+      <p>Contains (*):</p>
+      <code>[class*="top"]{}</code>
+    </section>
+  </main>
+</div>
